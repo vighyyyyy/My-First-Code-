@@ -1,11 +1,53 @@
-# My-First-Code-
-This is My first code on python
+marks = 0
 
-This is quiz code,well I did not add many question so Sorry.
+print("Welcome to the Quiz!")
 
-[My First Code.py.txt](https://github.com/user-attachments/files/23777246/My.First.Code.py.txt)
+name = input("Enter your name: ")
 
-This the First code I pasting in the git hub platform!
+print(f"Hello, {name}! Let's start the quiz.")
 
-I will continue to paste my codes like this again!
+questions = [
+
+    "What is the capital of France?;Paris;London;Berlin;Madrid;A",
+
+    "What is 2 + 2?;3;4;5;6;B",
+
+    "What is the largest planet in our solar system?;Earth;Mars;Jupiter;Saturn;C",
+
+]
+
+for q in questions:
+
+    parts = q.split(';')
+
+    question = parts[0]
+
+    options = parts[1:5]
+
+    answer = parts[5]
+
+    print("\n" + question)
+
+    print("A.", options[0])
+
+    print("B.", options[1])
+
+    print("C.", options[2])
+
+    print("D.", options[3])
+
+    user_answer = input("Your answer (A/B/C/D): ").strip().upper()
+
+    if user_answer == answer:
+
+        print("Correct!")
+
+        marks += 1
+
+    else:
+
+        print(f"Wrong! The correct answer is {answer}.")
+
+print(f"\nQuiz Over! You scored {marks} out of {len(questions)}.")
+
 
